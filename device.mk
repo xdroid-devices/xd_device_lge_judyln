@@ -45,10 +45,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     HBMTrigger
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.judyln
-
 # Init
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.judyln:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.judyln
