@@ -26,7 +26,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Setup dalvik vm configs
@@ -79,9 +78,9 @@ PRODUCT_PACKAGES += \
     se_nq_extn_client \
     libchrome.vendor
 
-# Qti common
-TARGET_COMMON_QTI_COMPONENTS := \
-    perf
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # common judy (sdm845)
 $(call inherit-product, device/lge/sdm845-common/sdm845.mk)
